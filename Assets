@@ -1,0 +1,7 @@
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Utility to fetch markdown frontmatter + body
+async function fetchMarkdown(path) {
+  const res = await fetch(path);
+  const text = await res.text();
+  const fmMatch = /^---([\
